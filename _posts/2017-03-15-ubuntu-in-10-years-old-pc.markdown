@@ -4,7 +4,7 @@ cover: assets/images/1.jpg
 title: Ubuntu in old PC
 date: 2017-03-15 12:00:00 +0545
 categories: blog
-author: john
+author: Sagar
 featured: true
 summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 ---
