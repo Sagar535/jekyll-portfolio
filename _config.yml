@@ -1,26 +1,26 @@
 # Site
-name: John Doe
-description: Just another website
-meta_description: Just another website
+name: Sagar Shah
+description: Personal website
+meta_description: Personal website for Sagar Shah
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon.ico
 paginate: 6
 baseurl:
-email: 'hello@john.doe'
+email: 'hello@Sagar.doe'
 google_analytics:
 disqus:
 sharethis:
 
 # Authors
 authors:
-  john:
-    name: john
-    display_name: John Doe
-    image: /assets/images/john.jpg
-    email: hello@john.doe
+  Sagar:
+    name: Sagar
+    display_name: Sagar Shah
+    image: /assets/images/Sagar.jpg
+    email: hello@Sagar.doe
     web: example.com
     twitter:
-    description: Hi, I am John Doe.
+    description: Hi, I am Sagar Shah.
 
 # Plugins
 plugins:
@@ -44,16 +44,16 @@ highlighter: rouge
 
 # SEO
 twitter:
-  username: john
+  username: Sagar
   card: summary
 
 facebook:
   app_id:
-  publisher: john.com
+  publisher: Sagar.com
   admins:
 
 social:
-name: John Doe
+name: Sagar Shah
 links:
     - https://twitter.com/
     - https://www.facebook.com/
