@@ -3,7 +3,7 @@ name: Sagar Shah
 description: Personal website
 meta_description: Personal website for Sagar Shah
 logo: /assets/images/logo.png
-favicon: /assets/images/favicon.ico
+favicon: /assets/images/logo.png
 paginate: 6
 baseurl:
 email: 'hello@Sagar.doe'
