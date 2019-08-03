@@ -38,7 +38,25 @@
 
 <!-- Begin Menu Navigation
 ================================================== -->
+<header class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
 
+        <!-- Begin Logo -->
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            {% if site.logo == true %}
+        <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
+            {% else %}
+            Sagar Shah
+            {% endif %}
+        </a>
+        <!-- End Logo -->
+
+        <!-- Begin Menu -->
+    </div>
+</header>
 
 
 
@@ -69,11 +87,48 @@
 
     <!-- Before Footer
     ================================================== -->
-    
 
     <!-- Begin Footer
     ================================================== -->
-    
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-3">
+                <div class="footer-widget">
+                    <h5 class="title">$ Prasad</h5>
+                    <p>Prasad is a Jekyll theme designed for complete portfolio-blog for developers.</p>
+                </div>
+                </div>
+
+                <div class="col-sm-3">
+                </div>
+
+                <div class="col-sm-3">
+                </div>
+
+                <div class="col-sm-3">
+                <div class="footer-widget textwidget">
+                    <h5 class="title">About Me</h5>
+                    <p>My name is Sagar Shah, and I’m currently employed as RoR Developer at Danphe Info Tech.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p class="pull-left">
+                Made with Love in <a href="https://jekyllrb.com" target="_blank"><img src="/assets/images/jekyll.png" width="32px" height="32px" /></a>
+                Copyright  ©  {{ site.time | date: "%Y" }} {{ site.name }}
+                </p>
+                <p class="pull-right">
+                <!-- Please, leave credit to author unless you own a commercial license: https://www.wowthemes.net/freebies-license/ -->
+                <a target="_blank" href="https://www.wowthemes.net/free-jekyll-template-affiliates/">"Affiliate Theme"</a> - Modified by <a href="https://cdrrazan.com">@cdrrazan</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
 
     </footer>
     <!-- End Footer

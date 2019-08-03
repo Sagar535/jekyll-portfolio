@@ -1,6 +1,6 @@
 # Site
 name: Sagar Shah
-description: Personal website
+description: Personal website for Sagar Shah.
 meta_description: Personal website for Sagar Shah
 logo: /assets/images/logo.png
 favicon: /assets/images/logo.png
@@ -16,7 +16,7 @@ authors:
   Sagar:
     name: Sagar
     display_name: Sagar Shah
-    image: /assets/images/Sagar.jpg
+    image: /assets/images/sagar.jpg
     email: hello@Sagar.doe
     web: example.com
     twitter:
