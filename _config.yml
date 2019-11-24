@@ -31,23 +31,6 @@ plugins:
 
 permalinks: pretty
 
-# Archives
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: 'category/:name/'
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      section: "post"
-
 # Other
 markdown: kramdown
 highlighter: rouge
