@@ -12,9 +12,7 @@ body {
 	padding: 0rem 0rem 1rem 0;
 }
 
-a {
-	color:#fff;
-}
+
 a,a:hover {
 	transition:all 0.2s;
 }

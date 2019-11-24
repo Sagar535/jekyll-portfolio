@@ -1,4 +1,5 @@
 # Site
+title: Sagar Shah
 name: Sagar Shah
 description: Personal website for Sagar Shah.
 meta_description: Personal website for Sagar Shah
@@ -13,8 +14,8 @@ sharethis:
 
 # Authors
 authors:
-  Sagar:
-    name: Sagar
+  sagar_shah:
+    name: sagar_shah
     display_name: Sagar Shah
     image: /assets/images/sagar.jpg
     email: 070bct535@ioe.edu.np
@@ -37,6 +38,15 @@ jekyll-archives:
   layout: archive
   permalinks:
     category: 'category/:name/'
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      section: "post"
 
 # Other
 markdown: kramdown
