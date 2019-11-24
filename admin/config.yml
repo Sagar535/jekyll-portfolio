@@ -3,11 +3,30 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+
 media_folder: 'assets/uploads'
+
+publish_mode: editorial_workflow
+
 collections:
+  #POSTS
   - name: 'blog'
     label: 'Blog'
-    folder: '_posts/'
+    folder: '_posts'
+    sort: "date:desc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{slug}}"
     fields:
-      - { name: Title }
-
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      - label: "Author"
+        name: "author"
+        widget: "select"
+        options: 
+          - { label: "Sagar Shah", value: "sagar_shah" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss" }
+      - { label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Categories", name: "categories", widget: "string", required: false }
+      - { label: "Tags", name: "tags", widget: "string", required: false }
