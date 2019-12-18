@@ -15,6 +15,8 @@ intro_paragraph: >-
   we have 100 items and there is no restriction for what items to be included.
   So an admin can select several items with repetition. But we our product to
   include that item only once.
+categories: ruby
+tags: ruby
 ---
 ## A cleaner in model
 
@@ -24,12 +26,11 @@ We can have a cleaning function in model like
 
 def remove_repeated_items 		\
     uniq_ids = product_items.select("Min(id) as id").group(:item_id).collect(&:id)
-    product_items.where.not(id: uniq_ids).destroy_all
+
+\    product_items.where.not(id: uniq_ids).destroy_all
 end
 
 {% endhighlight %}
-
-
 
 So we will call the function after the record is saved. 
 
