@@ -1,0 +1,14 @@
+- project_name: Boggle Game
+  github_link: https://gitlab.com/sagar535/boggle_assurance
+  website: https://boggle-assure.herokuapp.com/
+  description: "Word Game. Just don't visit the same letter twice. Enter as many words as you can find. Try to score as high as possible."
+
+- project_name: Snooker Marker
+  github_link: https://gitlab.com/sagar535/snooker-marker-nuxt
+  website: https://www.snookermarker.com/
+  description: "If you are playing snooker in club, you can use this app to keep track of the score. All is stored in remote if u login."
+
+- project_name: Skill Assessment
+  github_link: https://github.com/Sagar535/skill-assess-api
+  website: https://skill-assess-api.vercel.app/
+  description: "Simple quiz app. Mostly related to top skills, just practice and see how many u can get right. The more u score more badge u earn."
