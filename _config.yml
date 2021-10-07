@@ -1,7 +1,8 @@
 # Site
-title: Sagar Shah
+title: cdrsagar
+tagline: Personal website for Sagar Shah | Technical Blogs | Demonstrate programming skills
 name: Sagar Shah
-description: Personal website for Sagar Shah.
+description: Personal website for Sagar Shah. Technical Blogs specially on Ruby on Rails, Next js, faunadb. Demonstrates my own personal projects as well.
 meta_description: Personal website for Sagar Shah
 logo: /assets/images/logo.png
 favicon: /assets/images/logo.png
