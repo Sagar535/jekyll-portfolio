@@ -17,7 +17,7 @@ tags: one_line_solution
 ---
 It is not that difficult at all. We are going to use a method that does it in one line.
 
-{%  highlight ruby %}
+```ruby
 
 def hash_from_array(header_array, data_array)
 
@@ -25,4 +25,4 @@ def hash_from_array(header_array, data_array)
 
 end
 
-{% endhighlight %}
+```
