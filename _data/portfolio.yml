@@ -5,10 +5,15 @@
 
 - project_name: Snooker Marker
   github_link: https://gitlab.com/sagar535/snooker-marker-nuxt
-  website: https://www.snookermarker.com/
+  website: https://snookermarker.netlify.app/
   description: "If you are playing snooker in club, you can use this app to keep track of the score. All is stored in remote if u login."
 
 - project_name: Skill Assessment
   github_link: https://github.com/Sagar535/skill-assess-api
   website: https://skill-assess-api.vercel.app/
   description: "Simple quiz app. Mostly related to top skills, just practice and see how many u can get right. The more u score more badge u earn."
+
+- project_name: Vetmed
+  github_link: "#"
+  website: https://vetmed.vercel.app/
+  description: "Ecommerce implementation with next js and faunadb"
