@@ -66,6 +66,8 @@ DEPENDENCIES
   jekyll-archives
   jekyll-paginate
   jekyll-seo-tag
+  kramdown
+  rouge
 
 BUNDLED WITH
    1.17.3
