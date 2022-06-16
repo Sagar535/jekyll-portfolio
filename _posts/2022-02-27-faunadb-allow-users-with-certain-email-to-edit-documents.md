@@ -39,4 +39,8 @@ Go to <https://dashboard.fauna.com/>. Click on create database and name it TODO,
 
 
 
-Now click on the import schema and upload the `schema.gql` we have obtained from cloning the github repository. Now you will have access to the graphql playground. You can playaround if you like. Just click on the DOC on the right side and you will be presented with all the queries and mutations.
+Now click on the import schema and upload the `schema.gql` we have obtained from cloning the github repository. Now you will have access to the graphql playground. You can playaround if you like. Just click on the DOC on the right side and you will be presented with all the queries and mutations. 
+
+
+
+But in the mean time lets not use the console to create and manipulate data. Lets use the UI instead.  Click on the security on the left tab. If you have followed along with the tutorials mentioned above then you won't have to do any of this... You are already set to go on. But if you haven't then click on the Security---> Create New Role
