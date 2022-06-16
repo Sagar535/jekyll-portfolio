@@ -70,7 +70,7 @@ Now if you fire up your next js server with `yarn dev` then you will see NavBar 
 
 
 
-![Invalid Ref](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/invalid_ref_error_ojwxvo.png "Invalid Ref")
+![Invalid Ref](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/auth_role_mcctuk.png "Invalid Ref")
 
 
 
