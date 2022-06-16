@@ -10,6 +10,8 @@ intro_paragraph: >-
 
 
   In this post we are going to see how we can allow certain users to edit, create documents based on there email. Basically we will have a list of emails and only those in that list can perform basic admin operations... Like editing, deleting and read all the documents.
+categories: faunadb javascript js nextjs
+tags: faunadb javascript js nextjs
 ---
 
 
@@ -123,3 +125,13 @@ Finally add user as memebership.
 
 
 ![Add member user](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/add_membership_user_ag8nxw.png "Add member user")
+
+
+
+Now if you fire the next js server and login you will be able to create, update, view and delete the Todo items.\
+\
+That would be all ... We learned how to setup the todo... We don't know much going under the hood but we have a running app in the mean time... If you want to know how exactly things are working check the tutorials mentioned at the very beginning of this blog. \
+\
+Enjoy playing around. Try to create different user and see that the todo items from one user is not available to another user... \
+\
+In my next blog I'll explain how we can be admin and view and manipulate all the blogs...
