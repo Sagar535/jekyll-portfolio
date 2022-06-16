@@ -11,6 +11,10 @@ intro_paragraph: >-
 
   In this post we are going to see how we can allow certain users to edit, create documents based on there email. Basically we will have a list of emails and only those in that list can perform basic admin operations... Like editing, deleting and read all the documents.
 ---
+
+
+
+
 ## Requirements
 
 Before you continue with this tutorial I want you to visit <https://www.kjmczk.dev/blog/crud-app-with-next-js-faunadb-and-graphql> and develop a basic crud app. You can find the a github link <https://github.com/kjmczk/next-fauna-graphql-crud> in the tutorial as well. 
@@ -87,3 +91,35 @@ After you hit save you will be able to signup and you will be automatically logg
 Click on security ---> create new role. Make changes as shown in the image:
 
 ![Auth Role Setting](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/auth_role_vdt4t9.png "Auth Role Setting")
+
+
+
+Now since we want users to be restricted to there own records only we will implement several other changes:
+
+![ToDo Read Change](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/todo_read_change_nmuggg.png "TODO read change")
+
+
+
+
+
+![Todo write change](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/todo_write_change_tpc1df.png "Todo Write Change")
+
+
+
+
+
+![Todo Create Change](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/todo_create_change_fy6fzz.png "Todo Create Change")
+
+
+
+![Todo delete changes](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/todo_delete_change_oxm8zl.png "Todo delete changes")
+
+
+
+
+
+Finally add user as memebership.
+
+
+
+![Add member user](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/add_membership_user_ag8nxw.png "Add member user")
