@@ -865,3 +865,7 @@ iframe {
     .form-group .col-md-6:first-child {   margin-bottom: 1rem;}
 
 }
+
+code {
+    color: #bd4147 !important;
+}
