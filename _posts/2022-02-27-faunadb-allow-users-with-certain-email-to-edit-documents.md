@@ -88,7 +88,7 @@ Finally add user as memebership.
 
 ![Add member user](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/add_membership_user_ag8nxw.png "Add member user")
 
-Now if you fire the next js server and login you will be able to create, update, view and delete the Todo items.\
+Now if you fire the next js server and login you will be able to create, update, view and delete the Todo items. And we have achieved all this without writing single line of code.\
 \
 That would be all ... We learned how to setup the todo... We don't know much going under the hood but we have a running app in the mean time... If you want to know how exactly things are working check the tutorials mentioned at the very beginning of this blog. \
 \
