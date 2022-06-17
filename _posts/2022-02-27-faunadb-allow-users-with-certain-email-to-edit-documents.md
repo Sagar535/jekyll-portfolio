@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FaunaDB, Allow users with certain email to edit documents
+title: FaunaDB, Allow users with certain email to edit documents, PART 1
 author: sagar_shah
 date: 2022-02-27 13:36:55
 intro_paragraph: >-
