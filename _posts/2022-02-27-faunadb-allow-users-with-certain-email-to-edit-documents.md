@@ -72,7 +72,7 @@ After you hit save you will be able to signup and you will be automatically logg
 
 Click on security ---> create new role. Make changes as shown in the image:
 
-![Auth Role Setting](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/auth_role_vdt4t9.png "Auth Role Setting")
+![Auth Role Setting](https://res.cloudinary.com/dgz1zaji9/faunadb_email_admin_blog/auth_role_mcctuk.png "Auth Role Setting")
 
 Now since we want users to be restricted to there own records only we will implement several other changes:
 
