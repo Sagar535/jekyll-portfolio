@@ -1,6 +1,6 @@
 - project_name: Boggle Game
   github_link: https://gitlab.com/sagar535/boggle_assurance
-  website: https://boggle101.herokuapp.com/
+  website: https://boggle-assure.herokuapp.com/
   description: "Word Game. Just don't visit the same letter twice. Enter as many words as you can find. Try to score as high as possible."
 
 - project_name: Snooker Marker
