@@ -28,9 +28,11 @@ As long as your delayed job configurations are fine, you should be able to run t
 
 ### Caveat
 
-But it is not without its drawback. Say you made an change to some job or asynchronous function, the changes won't reflect immediately. The delayed job process is still running with the old codes and configuration. Say you made changes to the smtp server settings, you might be wondering for hours "Why mails are still being sent with old configurations?".\
-\
-So everytime you make some changes to some configuration or application job or asynchronous function. Be sure to run 
+But it is not without its drawback. Say you made an change to some job or asynchronous function, the changes won't reflect immediately. The delayed job process is still running with the old codes and configuration. Say you made changes to the smtp server settings, you might be wondering for hours "Why mails are still being sent with old configurations?".
+
+
+
+So everytime you make some changes to some configuration or application job or asynchronous function. Be sure to run.
 
 ```shell
 bin/delayed_job stop 
