@@ -15,7 +15,27 @@ intro_paragraph: >-
 
 
   Although capistrano delayed job is also made to make our life easier, If you are having trouble setting it up then you might not need to.
-categories: RoR rub rails rubyonrails
+categories: RoR ruby rails rubyonrails
 tags: RoR rub rails rubyonrails
 ---
-Well it all comes down to one line of command to make our life easier and run dealyed job daemon.
+Well it all comes down to one line of command to make our life easier and run dealyed job daemon. 
+
+
+
+```shell
+bin/delayed_job start
+```
+
+
+
+
+
+As long as your delayed job configurations are fine, you should be able to run the command and start the delayed job in background process. Since this is one time command we shouldn't bother with the capistrano delayed job. 
+
+### Caveat
+
+
+
+But it is not without its drawback. Say you made an change to some job or asynchronous function, the changes won't reflect immediately. The delayed job process is still running with the old codes and configuration. Say you made changes to the smtp server settings, you might be wondering for hours "Why mails are still being sent with old configurations?".\
+\
+So everytime you make some changes to some configuration or application job or asynchronous function. Be sure to run \`bin/delayed_job stop\` \`bin/delayed_job start\`
