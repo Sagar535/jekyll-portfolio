@@ -7,6 +7,6 @@ intro_paragraph: >-
   **Context**
 
 
-  Have you ever encountered a scenario where your application certainly has lots of testing and email testing and trapping suddenly overflows the Mailtrap generous free tier of 500 emails per month? That could be a big problem for many of us. We either have to stop testing (which is not an option) or we could start paying. But there is a third option, MailHog to the rescue.
+  Have you ever found yourself in a situation where your application undergoes extensive testing, and your email testing and trapping activities unexpectedly exceed the generous free tier limit of 500 emails per month offered by Mailtrap? This predicament can pose a significant challenge for many of us. While some may consider halting the testing process (which is clearly not a viable option), or resorting to paid services, there exists a compelling alternative: MailHog comes to the rescue.
 ---
 **Introduction**
