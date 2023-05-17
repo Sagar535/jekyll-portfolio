@@ -64,4 +64,8 @@ Then fix it with:
 
 ```shell
 go env -w GO111MODULE=off
+
+# And run the command again
+
+~/go/bin/MailHog
 ```
