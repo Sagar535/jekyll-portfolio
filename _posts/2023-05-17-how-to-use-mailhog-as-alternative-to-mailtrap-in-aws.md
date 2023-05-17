@@ -14,3 +14,22 @@ intro_paragraph: >-
 
 
 [MailHog](https://github.com/mailhog/MailHog) is an essential tool for developers and testers worldwide, providing a comprehensive solution for efficient email testing and trapping. With its unique approach of capturing outgoing emails and redirecting them to a local testing server, MailHog allows developers to thoroughly analyze and debug email functionalities without the need for real recipients or cluttered inboxes. Its flexibility, support for various protocols, and user-friendly web interface make it effortless to integrate into existing workflows and ensure the reliability and robustness of application email communication.
+
+
+
+**Our use case (mailhog in aws staging server)**
+
+MailHog can be easily adapted for staging environments with minor tweaks. By configuring MailHog to mimic staging conditions, developers can accurately test and address any email-related issues before deploying to production. This ensures the integrity and reliability of applications throughout the development process.
+
+
+
+We are going to setup mailhog in existing rails application in staging environment.
+
+
+
+**Installation**
+
+```shell
+sudo apt-get -y install golang-go
+go get github.com/mailhog/MailHog
+```
