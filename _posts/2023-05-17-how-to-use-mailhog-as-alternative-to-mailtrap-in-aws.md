@@ -29,7 +29,39 @@ We are going to setup mailhog in existing rails application in staging environme
 
 **Installation**
 
+Since most of the servers are ubuntu lets follow along for that one. You can visit the [mailhog](https://github.com/mailhog/MailHog) github documentation for installation in your OS.
+
 ```shell
 sudo apt-get -y install golang-go
 go get github.com/mailhog/MailHog
+```
+
+
+
+Now you can run the mailhog with command:
+
+```shell
+~/go/bin/MailHog
+```
+
+
+
+If you get the error
+
+
+
+```
+go: go.mod file not found in current directory or any parent directory; see 'go help modules'
+
+
+```
+
+
+
+Then fix it with: 
+
+
+
+```shell
+go env -w GO111MODULE=off
 ```
