@@ -8,6 +8,8 @@ intro_paragraph: >-
 
 
   Have you ever found yourself in a situation where your application undergoes extensive testing, and your email testing and trapping activities unexpectedly exceed the generous free tier limit of 500 emails per month offered by Mailtrap? This predicament can pose a significant challenge for many of us. While some may consider halting the testing process (which is clearly not a viable option), or resorting to paid services, there exists a compelling alternative: MailHog comes to the rescue.
+categories: "mailhog "
+tags: mailhog rails mailtrap_alternative
 ---
 **Introduction**
 
@@ -66,3 +68,15 @@ But our goal here is to use it as alternative to Mailtrap and not be limited by 
 ```
 # nginx reverse proxy to port 8025
 ```
+
+**Point dns namespace to correct ip address**
+
+*NOTE: It could take up to 5 minutes for DNS to work properly.*
+
+You should see the mailhog page already.
+
+
+
+**Point staging server's mails to port 1025**
+
+Now you can see the incoming mails.
