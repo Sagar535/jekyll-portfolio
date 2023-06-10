@@ -52,30 +52,50 @@ go env -w GO111MODULE=off
 ~/go/bin/MailHog
 ```
 
-
-
 After this you have mailhog listening at locahost port 1025 for smtp emails. And you can view those mails from localhost port 8025.
 
-
-
 If you are just testing your mails in local server for just the alternative to mailcatcher then we are done here.\
-But our goal here is to use it as alternative to Mailtrap and not be limited by its 500 emails per day free tier.
-
-
+But our goal here is to use it as alternative to Mailtrap and not be limited by its 500 emails per month free tier.
 
 **Setup Nginx to show the mails**
 
 ```
 # nginx reverse proxy to port 8025
+
+server {
+        listen 80;
+        server_name   mailhog.example.com;
+
+        access_log /var/log/nginx/mailhog-access.log;
+        error_log /var/log/nginx/mailhog-error.log;
+
+        location / {
+                    proxy_pass http://127.0.0.1:8025;
+  }
+}
 ```
+
+This is an Nginx server configuration that sets up a reverse proxy to redirect incoming requests to a specific port.
+
+Here's a breakdown of the code:
+
+1. `server`: This block defines the server configuration for Nginx.
+2. `listen 80;`: It specifies that Nginx should listen on port 80 for incoming requests.
+3. `server_name mailhog.example.com;`: This line sets the server name or domain for which this configuration is valid. In this case, it is set to "mailhog.example.com".
+4. `access_log /var/log/nginx/mailhog-access.log;`: It defines the location and filename for the access log file. This file will store information about incoming requests.
+5. `error_log /var/log/nginx/mailhog-error.log;`: This line sets the location and filename for the error log file. It will record any errors or issues encountered by Nginx while processing requests.
+6. `location / {`: This block defines a location directive in Nginx. It specifies that requests coming to the root URL ("/") will be affected by the following directives.
+7. `proxy_pass http://127.0.0.1:8025;`: This line sets up the reverse proxy by specifying the target URL where the requests should be forwarded. In this case, it is set to "[http://127.0.0.1:8025](http://127.0.0.1:8025/)", which means the requests will be sent to the local IP address (127.0.0.1) on port 8025.
+
+In summary, this Nginx configuration sets up a reverse proxy that listens on port 80 for requests coming to "mailhog.example.com". Any incoming requests to this domain will be proxied to the local IP address (127.0.0.1) on port 8025. This configuration is commonly used to redirect incoming web traffic to another backend server or application running on a different port or machine.
+
+
 
 **Point dns namespace to correct ip address**
 
 *NOTE: It could take up to 5 minutes for DNS to work properly.*
 
 You should see the mailhog page already.
-
-
 
 **Point staging server's mails to port 1025**
 
