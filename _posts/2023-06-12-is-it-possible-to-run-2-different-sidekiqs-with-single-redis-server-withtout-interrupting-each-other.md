@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Is it possible to run 2 different sidekiqs with single redis server
+title: Is it possible to run two different sidekiqs with single redis server
   withtout interrupting each other
 author: sagar_shah
 date: 2023-06-12 21:59:05
