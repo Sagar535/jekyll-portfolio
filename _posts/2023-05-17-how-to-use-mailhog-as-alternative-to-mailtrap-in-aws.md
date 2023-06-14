@@ -97,6 +97,87 @@ In summary, this Nginx configuration sets up a reverse proxy that listens on por
 
 You should see the mailhog page already.
 
+**Auth Setup**
+
+But currently anyone who tries to access our domains will be able to visit it and see our emails. It can be huge security vulnerabilities. To solve the problem mailhog provides us with [Basic http authentication](https://github.com/mailhog/MailHog/blob/master/docs/Auth.md). 
+
+Create auth file `touch ~/mailhog-auth.txt`
+
+Now it accepts `username:<bcrypt password>` 
+
+Username can be anything I like to keep it part of my email before @ like `dit.sagar`
+
+You can generated the bcrypt password with:
+
+```shell
+~/go/bin/MailHog bcrypt <password>
+```
+
+Replace paste the generated content at `<bcrypt password>` section in mailhog-auth.txt file
+
+Now when we try to access the page we are prompted with username and password form.
+
+**Systemd setup**
+
+Sometime we don't want to open a new terminal and keep the mailhog running with the command `~/go/bin/MailHog`. It's simply not practical. Instead lets create an systemd file that will run the mailhog process.
+
+Go to `cd /etc/systemd/system`
+Create the necessary file `touch mailhog_start.service`
+
+``` shell
+[Unit]
+Description=MailHog service to test mails(staging)
+After=network.target
+
+[Service]
+Type=simple
+User=deploy
+WorkingDirectory=/home/deploy/
+ExecStart=/bin/bash -lc '/home/deploy/go/bin/MailHog -auth-file=/home/deploy/mailhog-auth.txt'
+ExecReload=/bin/kill -TSTP $MAINPID
+
+# `append` only available in system version >=240.(sarojk)
+StandardOutput=append:/home/deploy/chitragupta/current/log/mailhog_access.log
+StandardError=append:/home/deploy/chitragupta/current/log/mailhog_error.log
+
+Restart=always
+RestartSec=1
+SyslogIdentifier=mailhog
+
+[Install]
+WantedBy=multi-user.target
+```
+
+The systemd file defines a service called MailHog. This service is used to test emails in a staging environment.
+
+**The [Unit] section of the file defines the following properties of the service:**
+
+Description: A brief description of the service.
+After: A list of other services that must be started before this service can be started. In this case, the network.target service must be started before MailHog can be started.
+
+**The [Service] section of the file defines the following properties of the service:**
+
+Type: The type of service. In this case, the service is a simple service, which means that it is a single process that is started and stopped as a unit.
+User: The user that the service will run as. In this case, the service will run as the deploy user.
+WorkingDirectory: The directory that the service will start in. In this case, the service will start in the /home/deploy directory.
+ExecStart: The command that will be used to start the service. In this case, the command is /bin/bash -lc '/home/deploy/go/bin/MailHog -auth-file=/home/deploy/mailhog-auth.txt'. This command will start the MailHog service and pass it the auth-file argument.
+ExecReload: The command that will be used to reload the service. In this case, the command is /bin/kill -TSTP $MAINPID. This command will send a SIGTSTP signal to the main process of the service, which will cause the service to reload its configuration.
+
+**The [Install] section of the file defines the following property of the service:**
+
+WantedBy: A list of targets that the service should be started when the target is activated. In this case, the service should be started when the multi-user.target target is activated.
+The systemd file you provided is a complete and valid systemd unit file. It can be used to start, stop, reload, and restart the MailHog service.
+
+
+Now we need to start this service with:
+
+```shell
+sudo systemctl daemon-reload
+sudo systemctl start mailhog_start.service
+
+```
+
+
 **Point staging server's mails to port 1025**
 
 Now you can see the incoming mails.
